@@ -75,7 +75,8 @@ const useVisitDummy = defineStore('visitDummy',()=>{
           approvalStatus: '승인'
         }
       ]) 
-    return {visit}
+    const currentVisitUser = reactive<VisitEntity>({} as VisitEntity)
+    return {visit, currentVisitUser}
 })
 
 export default useVisitDummy

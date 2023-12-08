@@ -120,6 +120,7 @@ const inputValue = computed({
   transition: all 0.225s ease;
   left: 16px;
   top: 50%;
+  color: var(--content);
   transform: translateY(-50%);
 }
 </style>

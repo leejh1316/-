@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import router from "@/router";
+const props = defineProps<{
+  goMain?:boolean
+}>()
+const handleClick = () => {
+  if(props?.goMain) router.push({name:'main'})
+  else router.back();
+}
 </script>
 <template>
   <div
     class="icon-container"
-    @click="router.push('/proxy/3000/absproxy/3000/')"
+    @click="handleClick"
   >
     <Icon class="back-icon" icon="fa-arrow-left"></Icon>
   </div>

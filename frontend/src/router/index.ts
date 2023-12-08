@@ -12,10 +12,20 @@ const routes: Readonly<RouteRecordRaw[]> = [
     component: () => import("@/pages/visit/Visit.vue"),
   },
   {
-    path: URL + "/check",
+    path: URL + "/check/:type",
     name: "check",
     component: () => import("@/pages/check/Check.vue"),
   },
+  {
+    path: URL + '/information',
+    name: 'information',
+    component: () => import("@/pages/infomation/Information.vue"),
+  },
+  {
+    path: URL + '/admin',
+    name: 'admin',
+    component: () => import("@/pages/admin/Admin.vue"),
+  }
 ];
 
 const router = createRouter({

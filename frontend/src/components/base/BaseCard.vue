@@ -6,11 +6,12 @@ const props = defineProps<{
   title: string;
   contents: string[];
   btnContent: string;
-  moveUrl: string;
+  moveName: string;
+  moveParams ?: any
 }>();
 
 const handleButtonClick = () => {
-  router.push('/proxy/3000/absproxy/3000' + props.moveUrl)
+  router.push({name:props.moveName, params:props.moveParams})
 };
 </script>
 <template>

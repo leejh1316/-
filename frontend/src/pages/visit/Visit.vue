@@ -57,7 +57,7 @@ const state = ref<"작성중" | "작성등록중" |"작성완료">('작성중')
         </template>
         <template v-else>
             <div class="center">
-                <BaseCard :title="'신청성공'" :contents="['신청에 성공했습니다.', '메인화면으로 돌아가시겠습니까?']" :btn-content="'메인화면 돌아가기'" :move-url="'/'"> </BaseCard>
+                <BaseCard :title="'신청성공'" :contents="['신청에 성공했습니다.', '메인화면으로 돌아가시겠습니까?']" :btn-content="'메인화면 돌아가기'" :move-name="'main'"> </BaseCard>
             </div>
         </template>
         <ContactSearch v-model:open="contactSearchOpen" @contact="handleContact"></ContactSearch>
